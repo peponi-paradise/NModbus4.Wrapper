@@ -36,7 +36,7 @@
 <br>
 
 - This wrapper class use C# [NModbus4](https://github.com/NModbus4/NModbus4) dll
-- GitHub : [NModbus4.Wrapper](https://github.com/peponi-paradise/Toy-project/tree/main/NModbus4.Wrapper)
+- GitHub : [NModbus4.Wrapper](https://github.com/peponi-paradise/NModbus4.Wrapper)
 - Blog : [Peponi](https://peponi-paradise.tistory.com)
 - Instruction & API information is on following section
 <br><br><br>
