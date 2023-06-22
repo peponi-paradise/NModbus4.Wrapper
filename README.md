@@ -150,7 +150,7 @@ THE SOFTWARE.
 
 ```cs
 string interfaceName = "Test";
-ModbusType modbusType = ModbusType.RTU_Master;
+ModbusType modbusType = ModbusType.TCP_Slave;
 int slaveNo = 1;
 EthernetInformation ethernetInformation = new EthernetInformation
 {
