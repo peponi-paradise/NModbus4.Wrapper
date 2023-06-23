@@ -237,7 +237,7 @@ else
 ```cs
 // 1. Single case
 
-var commData = new CommunicationData(DataStorage.HoldingRegister, 0, default(double), modbus.Interface.EndianOption);
+var commData = new CommunicationData(DataStorage.HoldingRegister, 0, 10.12, modbus.Interface.EndianOption);
 
 if (!await modbus.WriteDataAsync(commData))
 {
@@ -248,9 +248,9 @@ if (!await modbus.WriteDataAsync(commData))
 
 List<CommunicationData> commDatas = new List<CommunicationData>();
 
-commDatas.Add(new CommunicationData(DataStorage.HoldingRegister, 0, default(float), modbus.Interface.EndianOption));
-commDatas.Add(new CommunicationData(DataStorage.Coil, 0, default(bool), modbus.Interface.EndianOption));
-commDatas.Add(new CommunicationData(DataStorage.HoldingRegister, 2, default(int), modbus.Interface.EndianOption));
+commDatas.Add(new CommunicationData(DataStorage.HoldingRegister, 0, 3.465F, modbus.Interface.EndianOption));
+commDatas.Add(new CommunicationData(DataStorage.Coil, 0, true, modbus.Interface.EndianOption));
+commDatas.Add(new CommunicationData(DataStorage.HoldingRegister, 2, 534, modbus.Interface.EndianOption));
 
 if (!await modbus.WriteDataAsync(commDatas))
 {
@@ -380,7 +380,7 @@ if (!await modbus.WriteDataAsync(commDatas))
 | Return type  | Method                                                 | Description                 |
 |--------------|--------------------------------------------------------|-----------------------------|
 | void         | CommunicationData(DataStorage, ushort, object, Endian) | ctor                        |
-| List<ushort> | GetHexData()                                          | Parsing `Value` to hex data |
+| List<ushort> | GetHexData()                                           | Parsing `Value` to hex data |
 
 
 #### 2.1.10. class ModbusInterface
