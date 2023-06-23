@@ -22,7 +22,7 @@ namespace NModbus4.Wrapper
             {
                 var commData = new CommunicationData(dataStorage, (ushort)address, data, Interface.EndianOption);
                 // Master
-                if ((int)Interface.ModbusType < 10) rtn = Master_WriteData(dataStorage, (ushort)address, commData.GetSendData());
+                if ((int)Interface.ModbusType < 10) rtn = Master_WriteData(dataStorage, (ushort)address, commData.GetHexData());
                 // Slave
                 else Slave_WriteData(commData);
             }
@@ -73,7 +73,7 @@ namespace NModbus4.Wrapper
             try
             {
                 // Master
-                if ((int)Interface.ModbusType < 10) rtn = Master_WriteData(communicationData.DataStorage, (ushort)(communicationData.StartAddress - 1), communicationData.GetSendData());     // Subtract 1 manually when built in input type
+                if ((int)Interface.ModbusType < 10) rtn = Master_WriteData(communicationData.DataStorage, (ushort)(communicationData.StartAddress - 1), communicationData.GetHexData());     // Subtract 1 manually when built in input type
                 // Slave
                 else Slave_WriteData(communicationData);
             }

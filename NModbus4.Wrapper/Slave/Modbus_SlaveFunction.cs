@@ -38,11 +38,11 @@ namespace NModbus4.Wrapper
             switch (commData.DataStorage)
             {
                 case DataStorage.Coil:
-                    ModbusInstance.DataStore.CoilDiscretes[commData.StartAddress] = commData.GetSendData().First() == 1;
+                    ModbusInstance.DataStore.CoilDiscretes[commData.StartAddress] = commData.GetHexData().First() == 1;
                     break;
 
                 case DataStorage.DiscreteInput:
-                    ModbusInstance.DataStore.InputDiscretes[commData.StartAddress] = commData.GetSendData().First() == 1;
+                    ModbusInstance.DataStore.InputDiscretes[commData.StartAddress] = commData.GetHexData().First() == 1;
                     break;
 
                 case DataStorage.InputRegister:
@@ -50,11 +50,11 @@ namespace NModbus4.Wrapper
                     {
                         case DataType.Bool:
                         case DataType.Int:
-                            ModbusInstance.DataStore.InputRegisters[commData.StartAddress] = commData.GetSendData().First();
+                            ModbusInstance.DataStore.InputRegisters[commData.StartAddress] = commData.GetHexData().First();
                             break;
 
                         case DataType.Float:
-                            for (int index = 0; index < commData.GetSendData().Count; index++) ModbusInstance.DataStore.InputRegisters[commData.StartAddress + index] = commData.GetSendData()[index];
+                            for (int index = 0; index < commData.GetHexData().Count; index++) ModbusInstance.DataStore.InputRegisters[commData.StartAddress + index] = commData.GetHexData()[index];
                             break;
                     }
                     break;
@@ -64,11 +64,11 @@ namespace NModbus4.Wrapper
                     {
                         case DataType.Bool:
                         case DataType.Int:
-                            ModbusInstance.DataStore.HoldingRegisters[commData.StartAddress] = commData.GetSendData().First();
+                            ModbusInstance.DataStore.HoldingRegisters[commData.StartAddress] = commData.GetHexData().First();
                             break;
 
                         case DataType.Float:
-                            for (int index = 0; index < commData.GetSendData().Count; index++) ModbusInstance.DataStore.HoldingRegisters[commData.StartAddress + index] = commData.GetSendData()[index];
+                            for (int index = 0; index < commData.GetHexData().Count; index++) ModbusInstance.DataStore.HoldingRegisters[commData.StartAddress + index] = commData.GetHexData()[index];
                             break;
                     }
                     break;

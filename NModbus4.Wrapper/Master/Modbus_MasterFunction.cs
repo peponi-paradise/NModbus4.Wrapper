@@ -54,7 +54,7 @@ namespace NModbus4.Wrapper
                     else if (datas.Count >= ModbusInterface.TransactionLimit) break;
                 }
 
-                foreach (var data in dataCopy[index].GetSendData()) datas.Add(data);
+                foreach (var data in dataCopy[index].GetHexData()) datas.Add(data);
                 communicationDatas.Remove(dataCopy[index]);
             }
 
@@ -91,7 +91,7 @@ namespace NModbus4.Wrapper
                     else if (datas.Count >= ModbusInterface.TransactionLimit) break;
                 }
 
-                foreach (var data in dataCopy[index].GetSendData()) datas.Add(data);
+                foreach (var data in dataCopy[index].GetHexData()) datas.Add(data);
                 communicationDatas.Remove(dataCopy[index]);
             }
 

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NModbus4.Wrapper")]
 [assembly: AssemblyDescription("NModbus4 wrapper")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("https://peponi-paradise.tistory.com/")]
+[assembly: AssemblyCompany("Peponi")]
 [assembly: AssemblyProduct("NModbus4.Wrapper")]
 [assembly: AssemblyCopyright("Copyright © Peponi 2023")]
 [assembly: AssemblyTrademark("")]

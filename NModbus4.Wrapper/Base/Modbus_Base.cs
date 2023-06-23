@@ -73,7 +73,7 @@ namespace NModbus4.Wrapper
         }
 
         /// <summary>
-        /// Disconnect function이 없어 Disconnect 대신 direct dispose
+        /// Disconnect function is not exist in NModbus4. Direct dispose
         /// </summary>
         /// <returns></returns>
         public bool Dispose()
@@ -149,7 +149,7 @@ namespace NModbus4.Wrapper
         }
 
         /// <summary>
-        /// Thread에서 돌려야 함(Listen이 무한 블로킹 : Listen 호출 이후 들어오는 요청 자동 응답). Exception 나면 Listen 풀리고 쓰레드 종료됨. Thread 생성하고 다시 Listen 걸어주거나 다시 시작해야함.
+        /// Should be in Thread (Listen() makes thread blocking : Automatic reply after call Listen())<br/>Thread is terminated when catch exception<br/>Need to re-create slave when catch exception
         /// </summary>
         private void CreateSlave()
         {

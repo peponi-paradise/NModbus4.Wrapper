@@ -48,7 +48,7 @@ namespace NModbus4.Wrapper.Define
             }
         }
 
-        public List<ushort> GetSendData()
+        public List<ushort> GetHexData()
         {
             List<ushort> datas;
             if (DataType == DataType.Float) datas = Converter.ToUshortHexData((float)Convert.ChangeType(Value, typeof(float)), RemoteEndian);

@@ -1,7 +1,6 @@
-﻿
+
 # NModbus4.Wrapper
 
-<br>
 
 - [NModbus4.Wrapper](#nmodbus4wrapper)
   - [1. Instruction](#1-instruction)
@@ -33,21 +32,18 @@
       - [2.2.1. class ModbusService](#221-class-modbusservice)
         - [2.2.1.1 Members, Methods, Events](#2211-members-methods-events)
 
-<br>
+
+## 1. Instruction
+
 
 - This wrapper class use C# [NModbus4](https://github.com/NModbus4/NModbus4) dll
 - GitHub : [NModbus4.Wrapper](https://github.com/peponi-paradise/NModbus4.Wrapper)
 - Blog : [Peponi](https://peponi-paradise.tistory.com)
 - Instruction & API information is on following section
-<br><br><br>
 
-## 1. Instruction
-
-<br><br>
 
 ### 1.1. About NModbus4
 
-<br>
 
 ```text
 NModbus is a C# implementation of the Modbus protocol.
@@ -62,13 +58,11 @@ NModbus4 differs from original NModbus in following:
 4. assembly renamed to NModbus4.dll
 5. target framework changed to .NET 4
 ```
-
-<br><br>
-
-#### 1.1.1. NModbus4 License
-
-<br>
-
+  
+  
+#### 1.1.1. NModbus4 License  
+  
+  
 ```text
 The MIT License (MIT)
 
@@ -93,11 +87,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
-<br><br>
 
 ### 1.2. About NModbus4.Wrapper
 
-<br>
 
 ```text
 NModbus4.Wrapper is driven from NModbus4 for integrated usage.
@@ -108,11 +100,9 @@ Difference of NModbus4.Wrapper from NModbus4 is:
 3. support threading when using Client
 ```
 
-<br><br>
 
 #### 1.2.1. NModbus4.Wrapper License
 
-<br>
 
 ```text
 The MIT License (MIT)
@@ -138,15 +128,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
-<br><br>
 
 ### 1.3. Code Example
 
-<br><br>
 
 #### 1.3.1. From constructor to connect
 
-<br>
 
 ```cs
 string interfaceName = "Test";
@@ -181,20 +168,18 @@ void CheckConnectionStatus(ModbusInterface modbusInterface, bool connectStatus)
     }
 }
 ```
-<br><br>
+
 
 #### 1.3.2. Disconnect
 
-<br>
 
 ```cs
 modbus.Dispose();
 ```
-<br><br>
+
 
 #### 1.3.3. Restart
 
-<br>
 
 ```cs
 if (modbus != null) modbus.Dispose();
@@ -208,11 +193,10 @@ modbus.ModbusGeneralException += Modbus_ModbusGeneralException;
 
 modbus.Connect();
 ```
-<br><br>
+
 
 #### 1.3.4. Read data synchronous
 
-<br>
 
 ```cs
 // 1. Single case
@@ -245,11 +229,10 @@ else
     // Do something for error handling...
 }
 ```
-<br><br>
+
 
 #### 1.3.5. Write data asynchronous
 
-<br>
 
 ```cs
 // 1. Single case
@@ -275,30 +258,24 @@ if (!await modbus.WriteDataAsync(commDatas))
 }
 ```
 
-<br><br><br>
 
 ## 2. API Information
 
-<br><br>
 
 ### 2.1. namespace NModbus4.Wrapper.Define
 
-<br><br>
 
 #### 2.1.1. enum LogLevel
 
-<br>
 
 | Name          | Value |
 |---------------|-------|
 | Communication | 1     |
 | Exception     | 2     |
 
-<br><br>
 
 #### 2.1.2. enum CommunicationException
 
-<br>
 
 | Name                         | Value | Description            |
 |------------------------------|-------|------------------------|
@@ -306,11 +283,9 @@ if (!await modbus.WriteDataAsync(commDatas))
 | SlaveUnimplementedException  | 2     |                        |
 | MasterTransportNullException | 3     | Remote connection lost |
 
-<br><br>
 
 #### 2.1.3. enum DataType
 
-<br>
 
 - Support data type
 
@@ -320,11 +295,9 @@ if (!await modbus.WriteDataAsync(commDatas))
 | Int   | 2     |
 | Float | 4     |
 
-<br><br>
 
 #### 2.1.4. enum ModbusType
 
-<br>
 
 - Set Network type, Master / Slave mode
 
@@ -337,11 +310,9 @@ if (!await modbus.WriteDataAsync(commDatas))
 | TCP_Slave  | 12    |
 | UDP_Slave  | 13    |
 
-<br><br>
 
 #### 2.1.5. enum DataStorage
 
-<br>
 
 | Name            | Value |
 |-----------------|-------|
@@ -350,11 +321,9 @@ if (!await modbus.WriteDataAsync(commDatas))
 | InputRegister   | 2     |
 | HoldingRegister | 3     |
 
-<br><br>
 
 #### 2.1.6. enum Endian
 
-<br>
 
 - Remote's endian matching enum
 
@@ -363,11 +332,9 @@ if (!await modbus.WriteDataAsync(commDatas))
 | Big    | 1     |
 | Little | 2     |
 
-<br><br>
 
 #### 2.1.7. struct SerialPortInformation
 
-<br>
 
 | Type                      | Name      |
 |---------------------------|-----------|
@@ -378,30 +345,24 @@ if (!await modbus.WriteDataAsync(commDatas))
 | System.IO.Ports.StopBits  | Stopbits  |
 | System.IO.Ports.Handshake | Handshake |
 
-<br><br>
 
 #### 2.1.8. struct EthernetInformation
 
-<br>
 
 | Type   | Name    |
 |--------|---------|
 | string | Address |
 | int    | Port    |
 
-<br><br>
 
 #### 2.1.9. class CommunicationData
 
-<br>
 
 - Built in type for communication of NModbus4.Wrapper
 
-<br>
 
 ##### 2.1.9.1. Members, Methods
 
-<br>
 
 1. Members
 
@@ -410,27 +371,23 @@ if (!await modbus.WriteDataAsync(commDatas))
 | [DataStorage](#215-enum-datastorage) | DataStorage  |                                      |
 | [DataType](#213-enum-datatype)       | DataType     |                                      |
 | [Endian](#216-enum-endian)           | RemoteEndian |                                      |
-| ushort                               | StartAddress | Address of data<br>StartAddress >= 0 |
+| ushort                               | StartAddress | Address of data. StartAddress >= 0   |
 | object                               | Value        | bool, int, float                     |
 
-<br>
 
 2. Methods
 
 | Return type  | Method                                                 | Description                 |
 |--------------|--------------------------------------------------------|-----------------------------|
 | void         | CommunicationData(DataStorage, ushort, object, Endian) | ctor                        |
-| List<ushort> | GetSendData()                                          | Parsing `Value` to hex data |
+| List<ushort> | GetHexData()                                          | Parsing `Value` to hex data |
 
-<br><br>
 
 #### 2.1.10. class ModbusInterface
 
-<br>
 
 ##### 2.1.10.1 Members, Methods
 
-<br>
 
 1. Members
 
@@ -444,7 +401,6 @@ if (!await modbus.WriteDataAsync(commDatas))
 | [EthernetInformation](#218-struct-ethernetinformation)?     | EthernetInformation   |                     |
 | [Endian](#216-enum-endian)                                  | EndianOption          | Remote's endian     |
 
-<br>
 
 2. Methods
 
@@ -454,25 +410,24 @@ if (!await modbus.WriteDataAsync(commDatas))
 | void        | ModbusInterface(string, ModbusType, int, EthernetInformation, Endian)   | ctor        |
 
 
-<br><br><br>
-
 ### 2.2. namespace NModbus4.Wrapper
 
-<br>
 
 #### 2.2.1. class ModbusService
 
-<br>
 
 ##### 2.2.1.1 Members, Methods, Events
 
+
 1. Members
+
     | Type                                           | Name      | Description               |
     |------------------------------------------------|-----------|---------------------------|
     | [ModbusInterface](#2110-class-modbusinterface) | Interface | Communication information |
-<br>
+
 
 2. Methods
+
     | Return type                            | Method                                                         | Description                              |
     |----------------------------------------|----------------------------------------------------------------|------------------------------------------|
     | void                                   | ModbusService(ModbusInterface, Action\<ModbusInterface, bool>) | ctor                                     |
@@ -505,9 +460,10 @@ if (!await modbus.WriteDataAsync(commDatas))
     |                                        |                                                                |                                          |
     | Slave methods                          |                                                                |                                          |
     | void                                   | ClearDataStore()                                               | Clear and initialize all data            |
-<br>
+
 
 3. Events
+
     | Type          | Event                                                                              | Description                                                              |
     |---------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
     | void          | ModbusGeneralExceptionHandler(ModbusInterface)                                     | Deal general, unknown exception                                          |
@@ -519,4 +475,3 @@ if (!await modbus.WriteDataAsync(commDatas))
     |               |                                                                                    |                                                                          |
     | Slave events  |                                                                                    |                                                                          |
     | void          | ModbusDataReceivedHandler(ModbusInterface, DataStorage, List\<int>, List\<ushort>) | Remote master wrote data to this slave                                   |
-<br><br><br>

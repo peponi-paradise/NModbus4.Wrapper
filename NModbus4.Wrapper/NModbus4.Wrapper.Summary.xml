@@ -132,8 +132,8 @@
 	<Modbus_Base>
 		<Doc name="Modbus">
 			<summary>
-				Important information : Slave connect 이후 쓰레드 잠기기 때문에 Disconnect 시 꼭꼭 Dispose 해줘야함. 안그러면 같은 포트 다시 생성하는데 오래걸림
-				<para>대부분의 오류는 exception으로 들어옴</para>
+				Important information : Recommend - after Slave connected, need to call Dispose() when disconnecting (Slave thread locked by NModbus4).
+				<para>Almost errors are catched via exception</para>
 				<remarks>
 					<para>
 						- Important functions / events
@@ -154,17 +154,17 @@
 					<para>
 						3. Slave<br />
 						- <see cref="ClearDataStore()" /> : Clear all data<br />
-						- <see cref="ModbusDataReceived" /> : Notice DataStore written. Could catch data change direct
+						- <see cref="ModbusDataReceived" /> : Noticing DataStore is written. Could catch data change direct
 					</para>
 					<para>
-						- NModbus4 lib problem<br />1. Data write 이후 리턴올때까지 blocking 발생. Client 성능에 따라 Master 생성한 thread에서 freezing 가능성 있음.<br />2. Could not use DataStore index 0.<br />" DataStore address >= 0 "<br />" Communication address index 0 == DataStore index 1 "
+						- NModbus4 lib problem<br />1. Blocking occurs until method is returned after data is sent. Master thread has possibility for freezing by client's performance.<br />2. Could not use DataStore index 0.<br />" DataStore address > 0 "<br />" Communication address index 0 == DataStore index 1 "
 					</para>
 				</remarks>
 			</summary>
 		</Doc>
 		<Doc name="ModbusGeneralException">
 			<summary>
-				일반 exception 대처용<br />ex) Communication channel create fail
+				Treating usual exception<br />ex) Communication channel create fail
 			</summary>
 		</Doc>
 		<Doc name="ModbusCommunicationException">

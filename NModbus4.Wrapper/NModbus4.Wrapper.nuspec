@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.4</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.md</license>
+    <readme>README.md</readme>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>
+https://github.com/peponi-paradise/NModbus4.Wrapper
+    </projectUrl>
+    <description>
+NModbus4.Wrapper is driven from NModbus4 for integrated usage.
+Difference of NModbus4.Wrapper from NModbus4 is: 
+
+1. integrate class (RTU, TCP, UDP...) into ModbusService
+2. support C# data types (bool, int, float)
+3. support threading when using Client
+
+- GitHub : https://github.com/peponi-paradise/NModbus4.Wrapper
+- Blog : https://peponi-paradise.tistory.com
+    </description>
+    <releaseNotes>Test release 1.0.4</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Modbus NModbus4 Wrapper</tags>
+    <dependencies>
+      <dependency id="NModbus4" version="2.1.0"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\LICENSE.md" target=""/>
+    <file src="..\README.md" target=""/>
+  </files>
+</package>
