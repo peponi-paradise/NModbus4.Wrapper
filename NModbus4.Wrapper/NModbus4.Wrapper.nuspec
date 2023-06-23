@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>$id$</id>
-    <version>1.0.4</version>
+    <version>1.0.0</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -23,7 +23,7 @@ Difference of NModbus4.Wrapper from NModbus4 is:
 - GitHub : https://github.com/peponi-paradise/NModbus4.Wrapper
 - Blog : https://peponi-paradise.tistory.com
     </description>
-    <releaseNotes>Test release 1.0.4</releaseNotes>
+    <releaseNotes></releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>Modbus NModbus4 Wrapper</tags>
     <dependencies>
