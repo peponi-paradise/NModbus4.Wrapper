@@ -9,7 +9,6 @@
     - [1.2. About NModbus4.Wrapper](#12-about-nmodbus4wrapper)
       - [1.2.1. NModbus4.Wrapper License](#121-nmodbus4wrapper-license)
       - [1.2.2. NModbus4.Wrapper install](#122-nmodbus4wrapper-install)
-        - [1.2.2.1. .NET CLI](#1221-net-cli)
         - [1.2.2.2. Package Manager](#1222-package-manager)
     - [1.3. Code Example](#13-code-example)
       - [1.3.1. From constructor to connect](#131-from-constructor-to-connect)
@@ -135,19 +134,11 @@ THE SOFTWARE.
 #### 1.2.2. NModbus4.Wrapper install
 
 
-##### 1.2.2.1. .NET CLI
-
-
-```text
-dotnet add package NModbus4.Wrapper --version 1.0.0
-```
-
-
 ##### 1.2.2.2. Package Manager
 
 
 ```text
-NuGet\Install-Package NModbus4.Wrapper -Version 1.0.0
+NuGet\Install-Package NModbus4.Wrapper
 ```
 
 
