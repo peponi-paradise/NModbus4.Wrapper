@@ -9,7 +9,7 @@
     - [1.2. About NModbus4.Wrapper](#12-about-nmodbus4wrapper)
       - [1.2.1. NModbus4.Wrapper License](#121-nmodbus4wrapper-license)
       - [1.2.2. NModbus4.Wrapper install](#122-nmodbus4wrapper-install)
-        - [1.2.2.2. Package Manager](#1222-package-manager)
+        - [1.2.2.1. Package Manager](#1221-package-manager)
     - [1.3. Code Example](#13-code-example)
       - [1.3.1. From constructor to connect](#131-from-constructor-to-connect)
       - [1.3.2. Disconnect](#132-disconnect)
@@ -134,7 +134,7 @@ THE SOFTWARE.
 #### 1.2.2. NModbus4.Wrapper install
 
 
-##### 1.2.2.2. Package Manager
+##### 1.2.2.1. Package Manager
 
 
 ```text
